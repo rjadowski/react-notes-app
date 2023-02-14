@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Notes App
+This is a simple note-taking application built using React and React Router. The app allows users to create, edit, and delete notes. Notes are saved to local storage and are loaded when the app is opened.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Technologies used
+React
+React Router
 
-## Available Scripts
+# How to run the app
+To run the app, follow these steps:
 
-In the project directory, you can run:
+Clone this repository to your local machine.
 
-### `npm start`
+Install the required dependencies by running the following command in your terminal:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Start the app by running the following command in your terminal:
 
-### `npm test`
+## npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The app will be available at http://localhost:3000.
 
-### `npm run build`
+# Code structure
+The app consists of the following components:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+App: This is the main component of the app. It defines the routing logic and manages the notes data using useState and useEffect hooks.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Notes: This component displays a list of notes. It allows users to search notes using a search bar and add new notes by clicking the "Add Note" button.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+CreateNote: This component displays a form for creating a new note. When the form is submitted, the new note is added to the notes array in the App component's state.
 
-### `npm run eject`
+EditNote: This component displays a form for editing an existing note. When the form is submitted, the edited note is saved to the notes array in the App component's state.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+useCreateDate: This is a custom hook that returns the current date and time in a formatted string.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# How to use the app
+When you open the app, you will see a list of existing notes, if any. To add a new note, click the "Add Note" button. This will take you to the "Create Note" page, where you can enter a title and details for the new note. Click the "Save" button to save the note.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To edit an existing note, click the note's title. This will take you to the "Edit Note" page, where you can edit the note's title and details. Click the "Save" button to save the changes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To delete a note, click the note's "Delete" button.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To search for a note, click the search button in the header. This will display a search bar where you can enter a search query. Notes that match the search query will be displayed. Click the search button again to hide the search bar.
